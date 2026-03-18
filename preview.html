@@ -36,6 +36,23 @@
         gap: 28px;
       }
 
+      .debug-label {
+        position: fixed;
+        top: 18px;
+        right: 18px;
+        z-index: 10;
+        margin: 0;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(162, 24, 47, 0.92);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        box-shadow: 0 10px 24px rgba(82, 11, 25, 0.22);
+      }
+
       .preview-label {
         margin: 0;
         color: #5b637f;
@@ -65,6 +82,7 @@
     </style>
   </head>
   <body>
+    <p class="debug-label">Debug</p>
     <main class="preview-shell">
       <p class="preview-label">Client Preview • Fixed 1080 × 810</p>
       <div class="tablet-frame">
