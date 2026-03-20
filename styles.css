@@ -1,3 +1,43 @@
+@font-face {
+  font-family: "Radikal";
+  src:
+    url("./assets/fonts/Radikal-Light.woff2") format("woff2"),
+    url("./assets/fonts/Radikal-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Radikal";
+  src:
+    url("./assets/fonts/Radikal-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Radikal-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Radikal";
+  src:
+    url("./assets/fonts/Radikal-Medium.woff2") format("woff2"),
+    url("./assets/fonts/Radikal-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Radikal";
+  src:
+    url("./assets/fonts/Radikal-Bold.woff2") format("woff2"),
+    url("./assets/fonts/Radikal-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
 :root {
   --unnamed-color-707070: #707070;
   --unnamed-color-ffffff: #ffffff;
@@ -24,7 +64,7 @@ body {
 body {
   min-height: 100vh;
   background: var(--page-bg);
-  font-family: Montserrat, Avenir, "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Radikal", Avenir, "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 button {
@@ -323,7 +363,7 @@ img {
   width: 193px;
   background: var(--panel-cyan);
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .portrait-control-text {
@@ -511,7 +551,7 @@ img {
 }
 
 .landscape-artwork-wrap.is-bough-painting {
-  height: 625px;
+  height: 500px;
 }
 
 .landscape-artwork-wrap.is-frazer-painting {
@@ -570,7 +610,7 @@ img {
 }
 
 .landscape-artwork-wrap.is-bough-painting + .landscape-copy {
-  top: 700px;
+  top: 575px;
 }
 
 .landscape-artwork-wrap.is-frazer-painting + .landscape-copy {
@@ -615,59 +655,26 @@ img {
 
 .landscape-copy .landscape-title,
 .landscape-copy .landscape-artist {
-  position: absolute;
-  left: 10px;
-  width: 100%;
-  z-index: 2;
-  pointer-events: none;
-  opacity: 0;
-}
-
-.screen-landscape.is-landscape-overview .landscape-artwork-wrap:not(.is-bough-painting) + .landscape-copy .landscape-title {
-  top: -431px;
-}
-
-.screen-landscape.is-landscape-overview .landscape-artwork-wrap:not(.is-bough-painting) + .landscape-copy .landscape-artist {
-  top: -330px;
+  position: static;
+  left: auto;
+  width: auto;
+  z-index: auto;
+  pointer-events: auto;
   opacity: 1;
-}
-
-.screen-landscape.is-landscape-overview .landscape-artwork-wrap:not(.is-bough-painting) + .landscape-copy .landscape-title,
-.screen-landscape.is-landscape-overview .landscape-artwork-wrap.is-bough-painting + .landscape-copy .landscape-title,
-.screen-landscape.is-landscape-overview .landscape-artwork-wrap.is-bough-painting + .landscape-copy .landscape-artist {
-  opacity: 1;
-}
-
-.screen-landscape.is-landscape-overview .landscape-artwork-wrap.is-bough-painting + .landscape-copy .landscape-title {
-  top: -631px;
-}
-
-.landscape-artwork-wrap.is-bough-painting + .landscape-copy .landscape-artist {
-  top: -530px;
-}
-
-.screen-landscape .landscape-artwork-wrap:not(.is-bough-painting) + .landscape-copy .landscape-date {
-  top: -74px;
-}
-
-.screen-landscape.is-landscape-overview .landscape-artwork-wrap.is-frazer-painting + .landscape-copy .landscape-title,
-.screen-landscape.is-landscape-overview .landscape-artwork-wrap.is-frazer-painting + .landscape-copy .landscape-artist,
-.screen-landscape .landscape-artwork-wrap.is-frazer-painting + .landscape-copy .landscape-date {
-  top: auto;
 }
 
 .screen-landscape .landscape-artwork-wrap + .landscape-copy .landscape-date {
-  position: absolute;
-  top: -55px;
-  left: 10px;
-  width: 100%;
-  z-index: 2;
-  margin: 0;
-  color: #ffffff;
-  font-size: 28px;
-  line-height: 35px;
-  font-weight: 400;
-  pointer-events: none;
+  position: static;
+  top: auto;
+  left: auto;
+  width: auto;
+  z-index: auto;
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 300;
+  pointer-events: auto;
 }
 
 .landscape-title {
@@ -748,7 +755,7 @@ img {
 }
 
 .landscape-artwork-wrap.is-bough-painting ~ .landscape-painting-nav {
-  top: 372px;
+  top: 309px;
 }
 
 .landscape-artwork-wrap.is-frazer-painting ~ .landscape-painting-nav {
@@ -827,9 +834,9 @@ img {
   width: 130px;
   background: var(--unnamed-color-fe5b34);
   color: #1f2248;
-  font-size: 18px;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-size: 27px;
+  font-weight: 500;
+  text-transform: none;
 }
 
 .screen-landscape.is-large-text .landscape-title {
@@ -866,13 +873,14 @@ img {
   flex: 1 1 auto;
   min-height: 0;
   overflow: hidden;
+  position: relative;
 }
 
 .sculpture-title {
   margin: 0 0 10px;
   color: var(--unnamed-color-ebe717);
   font-size: 40px;
-  line-height: 40px;
+  line-height: 44px;
   letter-spacing: -0.03em;
   font-weight: 600;
 }
@@ -914,9 +922,9 @@ img {
 .sculpture-control-back {
   width: 131px;
   background: var(--unnamed-color-ebe717);
-  font-size: 18px;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: none;
 }
 
 .sculpture-control-text {
@@ -1024,8 +1032,42 @@ img {
   box-sizing: border-box;
 }
 
-.screen-sculpture.is-large-text .sculpture-text-flow::after {
-  display: none;
+.screen-sculpture.is-large-text .sculpture-text-flow.has-overflow:not(.is-at-end)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 10px;
+  bottom: 0;
+  display: block;
+  height: 104px;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 30, 66, 0),
+    rgba(25, 30, 66, 0.52) 32%,
+    rgba(25, 30, 66, 0.88) 68%,
+    rgba(25, 30, 66, 1)
+  );
+}
+
+.screen-sculpture.is-large-text .sculpture-text-flow.has-overflow:not(.is-at-start)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 10px;
+  top: 0;
+  display: block;
+  height: 96px;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 30, 66, 1),
+    rgba(25, 30, 66, 0.88) 34%,
+    rgba(25, 30, 66, 0.48) 68%,
+    rgba(25, 30, 66, 0)
+  );
 }
 
 .screen-sculpture.is-large-text .sculpture-artwork-wrap {
@@ -1043,8 +1085,9 @@ img {
 }
 
 .landscape-artwork-step-0 {
-  background-image: url("./assets/images/8-1740.png");
+  background-image: url("./assets/images/8.-1740_2.png");
   background-position: center center;
+  background-size: contain;
 }
 
 .landscape-artwork-step-1 {
@@ -1064,6 +1107,7 @@ img {
 
 .landscape-artwork-step-4 {
   background-image: url("./assets/images/paintings/9. Bough.jpg");
+  background-position: center 30%;
 }
 
 .landscape-artwork-step-5 {
@@ -1206,7 +1250,7 @@ img {
   }
 
   .landscape-artwork-wrap.is-bough-painting {
-    height: 57.8704vw;
+    height: 46.2963vw;
   }
 
   .landscape-artwork-wrap.is-frazer-painting {
@@ -1223,52 +1267,25 @@ img {
   }
 
   .landscape-artwork-wrap.is-bough-painting + .landscape-copy {
-    top: 64.8148vw;
+    top: 53.2407vw;
   }
 
   .landscape-copy .landscape-title,
   .landscape-copy .landscape-artist {
-    position: absolute;
-    left: 0.9259vw;
-    width: 100%;
-    z-index: 2;
-    pointer-events: none;
-    opacity: 0;
-  }
-
-  .screen-landscape.is-landscape-overview .landscape-artwork-wrap:not(.is-bough-painting) + .landscape-copy .landscape-title {
-    top: -39.9074vw;
-  }
-
-  .screen-landscape.is-landscape-overview .landscape-artwork-wrap:not(.is-bough-painting) + .landscape-copy .landscape-artist {
-    top: -30.5556vw;
+    position: static;
+    left: auto;
+    width: auto;
+    z-index: auto;
+    pointer-events: auto;
     opacity: 1;
-  }
-
-  .screen-landscape.is-landscape-overview .landscape-artwork-wrap.is-bough-painting + .landscape-copy .landscape-title,
-  .screen-landscape.is-landscape-overview .landscape-artwork-wrap.is-bough-painting + .landscape-copy .landscape-artist,
-  .screen-landscape.is-landscape-overview .landscape-artwork-wrap:not(.is-bough-painting) + .landscape-copy .landscape-title {
-    opacity: 1;
-  }
-
-  .screen-landscape.is-landscape-overview .landscape-artwork-wrap.is-bough-painting + .landscape-copy .landscape-title {
-    top: -58.4259vw;
-  }
-
-  .landscape-artwork-wrap.is-bough-painting + .landscape-copy .landscape-artist {
-    top: -49.0741vw;
   }
 
   .screen-landscape .landscape-artwork-wrap + .landscape-copy .landscape-date {
-    top: -5.0926vw;
-    color: #ffffff;
-    font-size: 2.5926vw;
-    line-height: 3.2407vw;
-    font-weight: 400;
-  }
-
-  .screen-landscape .landscape-artwork-wrap:not(.is-bough-painting) + .landscape-copy .landscape-date {
-    top: -6.8519vw;
+    top: auto;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.8519vw;
+    line-height: 2.1296vw;
+    font-weight: 300;
   }
 
   .landscape-title {
@@ -1316,7 +1333,7 @@ img {
   }
 
   .landscape-artwork-wrap.is-bough-painting ~ .landscape-painting-nav {
-    top: 34.3981vw;
+    top: 28.6111vw;
   }
 
   .landscape-artwork-wrap.is-frazer-painting ~ .landscape-painting-nav {
@@ -1394,7 +1411,7 @@ img {
 
   .landscape-control-back {
     width: 12.037vw;
-    font-size: 1.6667vw;
+    font-size: 2.34667vw;
   }
 
   .sculpture-copy {
@@ -1406,7 +1423,7 @@ img {
 
   .sculpture-title {
     font-size: 3.7037vw;
-    line-height: 3.7037vw;
+    line-height: 4.0741vw;
   }
 
   .sculpture-artist {
@@ -1430,7 +1447,7 @@ img {
 
   .sculpture-control-back {
     width: 12.1296vw;
-    font-size: 1.6667vw;
+    font-size: 2.34667vw;
   }
 
   .sculpture-control-text {
@@ -1482,7 +1499,7 @@ img {
 
   .portrait-control-back {
     width: 17.8704vw;
-    font-size: 2.2222vw;
+    font-size: 2.34667vw;
   }
 
   .portrait-control-text {
