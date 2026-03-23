@@ -350,6 +350,7 @@ img {
 
 .portrait-subhead {
   display: block;
+  margin-bottom: 24px;
   font-size: 28px;
   line-height: 35px;
   font-weight: 600;
@@ -919,6 +920,13 @@ img {
   font-weight: 300;
 }
 
+.sculpture-artist-body {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 300;
+}
+
 .sculpture-body {
   margin: 0;
   color: rgba(255, 255, 255, 0.88);
@@ -1052,6 +1060,11 @@ img {
   line-height: 26.45px;
 }
 
+.screen-sculpture.is-large-text .sculpture-artist-body {
+  font-size: 23px;
+  line-height: 26.45px;
+}
+
 .screen-sculpture.is-large-text .sculpture-copy {
   width: 404px;
 }
@@ -1127,12 +1140,12 @@ img {
 }
 
 .landscape-artwork-step-2 {
-  background-image: url("./assets/images/8-1740-midground.png");
+  background-image: url("./assets/images/paintings/8-1740-midground.png");
   background-position: center center;
 }
 
 .landscape-artwork-step-3 {
-  background-image: url("./assets/images/8-1740-background.png");
+  background-image: url("./assets/images/paintings/8-1740-background.png");
   background-position: center center;
 }
 
@@ -1473,6 +1486,11 @@ img {
   }
 
   .sculpture-artist-meta {
+    font-size: 1.8519vw;
+    line-height: 2.1296vw;
+  }
+
+  .sculpture-artist-body {
     font-size: 1.8519vw;
     line-height: 2.1296vw;
   }

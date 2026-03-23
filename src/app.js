@@ -50,7 +50,7 @@ const portraits = [
     title: "David Martin\n(1737-1797)",
     artist: "<em>John Balfour Hay of Leys</em>",
     summary:
-      "Oil on canvas, 18th century.\n\nWinner of the Challenge for the\nSilver Club in 1774, John Balfour Hay\nis depicted as a sporting gentleman, wearing his red golfing jacket.",
+      "Oil on canvas, 18th century\n\nWinner of the Challenge for the\nSilver Club in 1774, John Balfour Hay\nis depicted as a sporting gentleman, wearing his red golfing jacket.",
     body:
       "Known for depicting subjects \"with integrity in an honest natural style\", David Martin was born in Anstruther, Fife, and painted many figures of the Scottish Enlightenment. A portrait of Benjamin Franklin, painted by Martin when Franklin lived in London, is part of the White House collections.",
     artworkClass: "artwork-reference",
@@ -145,7 +145,7 @@ const sculptures = [
   },
   {
     title: "Waller Hubert Paton (1863-1940)",
-    artist: "<em>Tom Morris</em>\nBronze, 1910",
+    artist: "<em>Tom Morris</em>\n<span class=\"sculpture-artist-body\">Bronze, 1910</span>",
     body:
       "Just below The Royal and Ancient Clubhouse clock, a portrait in bronze of Tom Morris looks out across the Old Course which he tended for nearly 40 years. Sculptor Waller Hubert Paton - son of celebrated artist and RSA academician Waller Hugh Paton - designed the bronze which was funded by subscriptions from golf clubs and leading figures in the game. The memorial bronze was installed in 1910, two years after Morris' death.",
     artworkClass: "sculpture-artwork-2",
@@ -158,7 +158,7 @@ const landscapePaintings = [
       {
         title: "Unknown Artist",
         artist: "View of St Andrews from the Course",
-        date: "1740s",
+        date: "Oil on canvas, 1740s",
         body:
           "The earliest known painting of golf at St Andrews, dated to the 1740s, was donated to the Club in 1847. A note in the minutes states it was \"executed at a time when our ancestors took to the field in wigs and cocked hats.\"",
         artworkClass: "landscape-artwork-step-0",
@@ -196,7 +196,7 @@ const landscapePaintings = [
         artist: "A Golf Match at St Andrews",
         date: "Watercolour, 1868",
         body:
-          "“Painted on the sport” by landscape artist Samuel Bough, the Old Course appears more rugged than it is today, with sheep grazing in the foreground in the foreground and well into the distance.",
+          "“Painted on the sport” by landscape artist Samuel Bough, the Old Course appears more rugged than it is today, with sheep grazing in the foreground and well into the distance.",
         artworkClass: "landscape-artwork-step-4",
       },
       {
@@ -228,7 +228,7 @@ const landscapePaintings = [
   {
     steps: [
       {
-        title: "William Miller Frazer (1864-1961)",
+        title: "William Miller Frazer RSA (1864-1961)",
         artist: "Golf Course with Sheep",
         date: "Watercolour, 1901",
         body:
