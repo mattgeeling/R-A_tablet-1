@@ -48,7 +48,7 @@ const IDLE_TIMEOUT_MS = 90000;
 const portraits = [
   {
     title: "David Martin\n(1737-1797)",
-    artist: "John Balfour Hay of Leys",
+    artist: "<em>John Balfour Hay of Leys</em>",
     summary:
       "Oil on canvas, 18th century.\n\nWinner of the Challenge for the\nSilver Club in 1774, John Balfour Hay\nis depicted as a sporting gentleman, wearing his red golfing jacket.",
     body:
@@ -58,10 +58,10 @@ const portraits = [
   },
   {
     title: "Sir Francis Grant HRSA (1803-1878)",
-    artist: "John Whyte Melville",
+    artist: "<em>John Whyte Melville</em>",
     preserveLineBreaks: true,
     summary:
-      "Oil on canvas, 1874\n\nMajor George Whyte Melville\nOil on canvas, 1850s\n\n‘The Father of the Club’, John Whyte Melville was a Member for 67 years and elected Captain twice, in 1823 and 1883, dying just before assuming office a second time. He laid the Clubhouse foundation stone when construction began in 1853 and deputised for the Prince of Wales during his Captaincy ten years later.",
+      "Oil on canvas, 1874\n\n<span class=\"portrait-subhead-group\"><span class=\"portrait-subhead\"><em>Major George Whyte Melville</em></span><span class=\"portrait-subhead-meta\">Oil on canvas, 1850s</span></span>\n\n‘The Father of the Club’, John Whyte Melville was a Member for 67 years and elected Captain twice, in 1823 and 1883, twice, in 1823 and 1883. He died before taking office for the second time. He laid the Clubhouse foundation stone when construction began in 1853 and deputised for the Prince of Wales during his Captaincy ten years later.",
     body:
       "His son, the author Major George\nWhyte Melville, Captain in 1851,\nserved in the Crimean War. He died\nin a hunting accident in 1878 and\nthe fountain on Market Street,\nSt Andrews, was dedicated in\nhis memory.\n\nArtist Sir Francis Grant was elected a Member of the Club in 1823 and specialised in sporting and equestrian subjects. He was elected President of London's Royal Academy in 1866.",
     artworkClass: "artwork-image artwork-2",
@@ -72,42 +72,42 @@ const portraits = [
   },
   {
     title: "John Pettie HRSA (1839-1893)",
-    artist: "Henry Lamb",
+    artist: "<em>Henry Lamb</em>",
     summary:
-      "Oil on canvas, 1891\n\nWinner of the Club’s Royal Medal in 1878, Henry Lamb was Secretary of Royal Wimbledon and helped found Royal St George’s. Lamb is also credited with inventing the Bulger-faced driver in 1888, a feature in golf club design to this day.",
+      "Oil on canvas, 1891\n\nWinner of the Club’s Royal Medal in 1878, Henry Lamb was Secretary of Royal Wimbledon and helped found Royal St George’s. Lamb is also credited with inventing the bulger-faced driver in 1888, a feature of golf club design to this day.",
     body:
-      "Edinburgh-born John Pettie’s first RSA exhibit, aged just 19, was <em>A Scene from the Fortunes of Nigel</em>, inspired by Walter Scott’s novel. A leader amongst fellow Scottish artists in London, Pettie was elected to the Royal Academy in 1874.",
+      "At only 19, Edinburgh-born John Pettie’s first RSA exhibit was A Scenefrom the Fortunes of Nigel</em>, inspired by Walter Scott’s novel. A leader amongst fellow Scottish artists in London, Pettie was elected to the Royal Academy in 1874.",
     artworkClass: "artwork-image artwork-3",
     artworkImages: ["./assets/images/paintings/3 Henry Lamb.jpg"],
   },
   {
     title: "Sir George Reid PPRSA (1841-1913)",
-    artist: "Tom Morris",
+    artist: "<em>Tom Morris</em>",
     preserveLineBreaks: true,
     summary:
-      "Oil on canvas, 1903\n\n<em>‘You’ve got the checks on my\nbunnet a’ wrang!’</em> reacted Tom\nMorris to seeing his portrait\nfor the first time.",
+      "Oil on canvas, 1903\n\n<em>‘You’ve got the checks on my\nbunnet a’ wrang!’</em> reacted Tom\nMorris upon seeing his portrait\nfor the first time.",
     body:
-      "Sir George Reid, President of\nthe Royal Scottish Academy\n1891-1902, was paid £250\nfor the commission. Reid\nsketched Morris during several\nsittings at his Edinburgh studio,\none of which is displayed in\nour exhibition. Can you see\nthe resemblance?\n\nReid’s portrait was exhibited at the\n1904 World Fair in St Louis, Missouri,\nthe 1911 International Fine Arts\nExhibition in Rome, and <em>The Art of\nGolf</em> touring exhibition by the\nNational Galleries of Scotland\nfrom 2012-2013.",
+      "Sir George Reid, President of\nthe RSA 1891 to 1902, was paid £250\nfor the commission. Reid\nsketched Morris during several\nsittings at his Edinburgh studio,\none of which is displayed in\nour exhibition. Can you see\nthe resemblance?\n\nReid’s portrait was exhibited at the\n1904 World Fair in St Louis, Missouri,\nthe 1911 International Fine Arts\nExhibition in in Rome, and The Art\nof Golf touring exhibition from 2012 to 2013.",
     artworkClass: "artwork-image artwork-4",
     artworkImages: ["./assets/images/paintings/4. Tom Morris.JPG"],
   },
   {
     title: "Sir James Guthrie PPRSA (1859-1930)",
-    artist: "Field Marshall\nDouglas Haig",
+    artist: "<em>Field Marshal\nDouglas Haig</em>",
     preserveLineBreaks: true,
     summary:
-      "Oil on canvas, 1922\n\nField Marshall Douglas Haig,\nCommander of British Forces\nduring the First World War,\nbecame a Member of the Club\nin 1894 and was Captain in 1919.",
+      "Oil on canvas, 1922\n\nField Marshal Douglas Haig,\nCommander of British Forces\nduring the First World War,\nbecame a Member of the Club\nin 1894 and was Captain in 1919.",
     body:
-      "Sir James Guthrie, one of the\n‘Glasgow Boys’ group of artists,\nchose not to depict Haig as the\nglorious victor. He is seated,\nappearing exhausted, with a\nhaunted expression suggesting\nthe horrors of the war.\n\nThe Club received so many\nrequests to borrow the painting,\nthey decided in 1928 that “on no\naccount whatsoever would the\nportrait be allowed out of the Club\nagain.” When Guthrie, RSA President\nfrom 1902-1919, died in 1930,\nthe Club allowed the portrait to\nbe displayed in an exhibition of\nhis works the following year.",
+      "Sir James Guthrie, one of the\n‘Glasgow Boys’ group of artists,\nchose not to depict Haig as the\nglorious victor. He is seated,\nappearing exhausted, with a\nhaunted expression alluding to\nthe horrors of the war.\n\nThe Club received so many\nborrow the painting that\nin 1928 it decided “on no\naccount whatsoever would the\nportrait be allowed out of the Club\nagain.” When Guthrie, RSA President\nfrom 1902-1919, died in 1930,\nthe Club allowed the portrait to\nbe displayed in an exhibition of\nhis works the following year.",
     artworkClass: "artwork-image artwork-5",
     artworkImages: ["./assets/images/paintings/5. FM Haig.jpg"],
   },
   {
     title: "Sir William Hutchison PPRSA (1889-1970)",
-    artist: "Andrew Kirkaldy",
+    artist: "<em>Andrew Kirkaldy</em>",
     preserveLineBreaks: true,
     summary:
-      "Oil on canvas, 1929\n\nAffectionately known as ‘Andra’,\nAndrew Kirkaldy was runner-up in\nThe Open three times and\nProfessional to the Club from\n1910-1934. Arriving at the Clubhouse\neveryday at 9am, Kirkaldy was paid £1\na week and 2 shillings six pence for\nevery round he played with Members.",
+      "Oil on canvas, 1929\n\nAffectionately known as ‘Andra’,\nAndrew Kirkaldy was runner-up in\nThe Open three times and\nProfessional to the Club from\n1910-1934. Arriving at the Clubhouse\neveryday at 9am, Kirkaldy was paid £1\na week and two shillings six pence for\nevery round he played with Members.",
     body:
       "“One or two Club Members”\ncommissioned Sir William Hutchison\nto paint Kirkaldy’s portrait. Hutchison\nattended Edinburgh College of Art\nand was severely wounded during\nthe First World War. Recovering to\nresume his career, Hutchison was\ndirector of Glasgow School of Art\nfrom 1933-1943 and became\nPresident of the RSA in 1950.",
     artworkClass: "artwork-image artwork-6",
@@ -115,11 +115,11 @@ const portraits = [
   },
   {
     title: "Geoffrey Squire (1923-2012)",
-    artist: "John Panton",
+    artist: "<em>John Panton</em>",
     summary:
-      "Oil on canvas, 1995\n\nThe Club’s Honorary Professional from 1988-2006, John Panton retired shortly after his 90th birthday. During a distinguished career Panton won 39 professional tournaments, played in three Ryder Cups and finished fifth in The Open twice.",
+      "Oil on canvas, 1995\n\nThe Club’s Honorary Professional from 1988 to 2006, John Panton retired shortly after his 90th birthday. During a distinguished career Panton won 39 professional tournaments, played in three Ryder Cups and twice finished fifth in The Open.",
     body:
-      "Geoffrey Squire studied at Leeds School of Art, Ruskin School of Art at Oxford University, and Slade School of Art at University College, London. After serving in the armed forces during the Second World War, he began teaching at Glasgow School of Art, eventually becoming Senior Lecturer and serving as Governor from 1988-1990.",
+      "Geoffrey Squire studied at Leeds School of Art, Ruskin School of Art at Oxford University, and Slade School of Art at University College, London. After serving in the armed forces during the Second World War, he began teaching at Glasgow School of Art, eventually becoming Senior Lecturer\nand serving as Governor from 1988 to 1990.",
     artworkClass: "artwork-image artwork-7",
     artworkImages: ["./assets/images/paintings/7.-John-Panton_2.png"],
   },
@@ -138,14 +138,14 @@ let idleTimeoutTimer = null;
 const sculptures = [
   {
     title: "Reginald Fairlie RSA (1883-1952)",
-    artist: "The First World War Memorial\nBronze, 1922",
+    artist: "<em>The First World War Memorial</em>\n<span class=\"sculpture-artist-meta\">Bronze, 1922</span>",
     body:
-      "Commissioned in memory of the 62 Members and four staff who died in the First World War, including two of the Club’s best golfers, Norman Hunter and Jack Graham, who both served on the Rules Committee. Designed by Edinburgh architect Reginald Fairlie, who’s father and grandfather had both captained the Club. Fairlie was elected to the RSA in 1933.",
+      "Commissioned in memory of the 62 Members and four staff who died in the First World War, including two of the Club’s best golfers, Norman Hunter and Jack Graham, who both served on the Rules Committee. It was designed by Edinburgh architect Reginald Fairlie, whose father and grandfather both Captained the Club. Fairlie was elected to the RSA in 1933.",
     artworkClass: "sculpture-artwork-1",
   },
   {
     title: "Waller Hubert Paton (1863-1940)",
-    artist: "Tom Morris\nBronze, 1910",
+    artist: "<em>Tom Morris</em>\nBronze, 1910",
     body:
       "Just below The Royal and Ancient Clubhouse clock, a portrait in bronze of Tom Morris looks out across the Old Course which he tended for nearly 40 years. Sculptor Waller Hubert Paton - son of celebrated artist and RSA academician Waller Hugh Paton - designed the bronze which was funded by subscriptions from golf clubs and leading figures in the game. The memorial bronze was installed in 1910, two years after Morris' death.",
     artworkClass: "sculpture-artwork-2",
@@ -157,31 +157,31 @@ const landscapePaintings = [
     steps: [
       {
         title: "Unknown Artist",
-        artist: "View of St Andrews from the<br>Old Course with Golfers",
+        artist: "View of St Andrews from the Course",
         date: "1740s",
         body:
-          "The earliest known painting of golf at St Andrews, dated to the 1740s was donated to the Club in 1847. A note in the minutes states it was <em>\"executed at a time when our ancestors took to the field in wigs and cocked hats.\"</em>",
+          "The earliest known painting of golf at St Andrews, dated to the 1740s, was donated to the Club in 1847. A note in the minutes states it was \"executed at a time when our ancestors took to the field in wigs and cocked hats.\"",
         artworkClass: "landscape-artwork-step-0",
       },
       {
-        title: "View of St Andrews from the<br>Old Course, with Golfers",
-        artist: "Unknown artist",
+        title: "Unknown Artist",
+        artist: "View of St Andrews from the Course",
         date: "Foreground",
         body:
           "A match between two pairs of golfers is in progress – the gentlemen in blue against the gentlemen in red and yellow. Each pair has a caddie, who gathers the clubs under his arm.",
         artworkClass: "landscape-artwork-step-1",
       },
       {
-        title: "View of St Andrews from the<br>Old Course, with Golfers",
-        artist: "Unknown artist",
+        title: "Unknown Artist",
+        artist: "View of St Andrews from the Course",
         date: "Middle ground",
         body:
           "Golfers did not have sole use of the links, beyond them we can see shepherds, a dog and a flock of sheep. The windmill, seen on the right of the painting, was demolished in 1775.",
         artworkClass: "landscape-artwork-step-2",
       },
       {
-        title: "View of St Andrews from the<br>Old Course, with Golfers",
-        artist: "Unknown artist",
+        title: "Unknown Artist",
+        artist: "View of St Andrews from the Course",
         date: "Background",
         body:
           "St Andrews landmarks such as the Cathedral, St Rule’s Tower, Castle and St Salvator’s Tower can be seen in the distance.",
@@ -192,33 +192,33 @@ const landscapePaintings = [
   {
     steps: [
       {
-        title: "Samuel Bough (1822-1878)",
+        title: "Samuel Bough RSA (1822-1878)",
         artist: "A Golf Match at St Andrews",
         date: "Watercolour, 1868",
         body:
-          "“Painted on the sport” by landscape artist Samuel Bough, the Old Course appears more rugged than it is today, with sheep grazing in the foreground and trailing off into the distance.",
+          "“Painted on the sport” by landscape artist Samuel Bough, the Old Course appears more rugged than it is today, with sheep grazing in the foreground in the foreground and well into the distance.",
         artworkClass: "landscape-artwork-step-4",
       },
       {
-        title: "A Golf Match at St Andrews",
-        artist: "By Samuel Bough (1822-1878)",
-        date: "Spectators",
+        title: "Samuel Bough RSA (1822-1878)",
+        artist: "A Golf Match at St Andrews",
+        date: "Watercolour, 1868",
         body:
           "Two groups of spectators are visible, and the parasols indicate that a number of women are present.",
         artworkClass: "landscape-artwork-step-5",
       },
       {
-        title: "A Golf Match at St Andrews",
-        artist: "By Samuel Bough (1822-1878)",
-        date: "Golfers",
+        title: "Samuel Bough RSA (1822-1878)",
+        artist: "A Golf Match at St Andrews",
+        date: "Watercolour, 1868",
         body:
           "Two gentlemen in red coats stand near the left hand group, with one looking as if he is about to play the ball.",
         artworkClass: "landscape-artwork-step-6",
       },
       {
-        title: "A Golf Match at St Andrews",
-        artist: "By Samuel Bough (1822-1878)",
-        date: "Ginger Beer Cart",
+        title: "Samuel Bough RSA (1822-1878)",
+        artist: "A Golf Match at St Andrews",
+        date: "Watercolour, 1868",
         body:
           "On the far left of the picture, barely visible through the gorse, David ‘Da’ Anderson stands beside his ginger beer cart. A feather ball maker by trade, ‘Da’ provided refreshment to golfers on the course for many years. The 4th (Ginger Beer) hole is named after him.",
         artworkClass: "landscape-artwork-step-7",
