@@ -61,7 +61,7 @@ const portraits = [
     artist: "<em>John Whyte Melville</em>",
     preserveLineBreaks: true,
     summary:
-      "Oil on canvas, 1874\n\n<span class=\"portrait-subhead-group\"><span class=\"portrait-subhead\"><em>Major George Whyte Melville</em></span><span class=\"portrait-subhead-meta\">Oil on canvas, 1850s</span></span>\n\n‘The Father of the Club’, John Whyte Melville was a Member for 67 years and elected Captain twice, in 1823 and 1883, twice, in 1823 and 1883. He died before taking office for the second time. He laid the Clubhouse foundation stone when construction began in 1853 and deputised for the Prince of Wales during his Captaincy ten years later.",
+      "Oil on canvas, 1874\n\n<span class=\"portrait-subhead-group\"><span class=\"portrait-subhead portrait-subhead-regular\">Major George Whyte Melville</span><span class=\"portrait-subhead-meta\">Oil on canvas, 1850s</span></span>\n\n‘The Father of the Club’, John Whyte Melville was a Member for 67 years and elected Captain twice, in 1823 and 1883, twice, in 1823 and 1883. He died before taking office for the second time. He laid the Clubhouse foundation stone when construction began in 1853 and deputised for the Prince of Wales during his Captaincy ten years later.",
     body:
       "His son, the author Major George\nWhyte Melville, Captain in 1851,\nserved in the Crimean War. He died\nin a hunting accident in 1878 and\nthe fountain on Market Street,\nSt Andrews, was dedicated in\nhis memory.\n\nArtist Sir Francis Grant was elected a Member of the Club in 1823 and specialised in sporting and equestrian subjects. He was elected President of London's Royal Academy in 1866.",
     artworkClass: "artwork-image artwork-2",
@@ -76,7 +76,7 @@ const portraits = [
     summary:
       "Oil on canvas, 1891\n\nWinner of the Club’s Royal Medal in 1878, Henry Lamb was Secretary of Royal Wimbledon and helped found Royal St George’s. Lamb is also credited with inventing the bulger-faced driver in 1888, a feature of golf club design to this day.",
     body:
-      "At only 19, Edinburgh-born John Pettie’s first RSA exhibit was A Scenefrom the Fortunes of Nigel</em>, inspired by Walter Scott’s novel. A leader amongst fellow Scottish artists in London, Pettie was elected to the Royal Academy in 1874.",
+      "At only 19, Edinburgh-born John Pettie’s first RSA exhibit was <em>A Scene from the Fortunes of Nigel</em>, inspired by Walter Scott’s novel. A leader amongst fellow Scottish artists in London, Pettie was elected to the Royal Academy in 1874.",
     artworkClass: "artwork-image artwork-3",
     artworkImages: ["./assets/images/paintings/3 Henry Lamb.jpg"],
   },
@@ -87,7 +87,7 @@ const portraits = [
     summary:
       "Oil on canvas, 1903\n\n<em>‘You’ve got the checks on my\nbunnet a’ wrang!’</em> reacted Tom\nMorris upon seeing his portrait\nfor the first time.",
     body:
-      "Sir George Reid, President of\nthe RSA 1891 to 1902, was paid £250\nfor the commission. Reid\nsketched Morris during several\nsittings at his Edinburgh studio,\none of which is displayed in\nour exhibition. Can you see\nthe resemblance?\n\nReid’s portrait was exhibited at the\n1904 World Fair in St Louis, Missouri,\nthe 1911 International Fine Arts\nExhibition in in Rome, and The Art\nof Golf touring exhibition from 2012 to 2013.",
+      "Sir George Reid, President of\nthe RSA 1891 to 1902, was paid £250\nfor the commission. Reid\nsketched Morris during several\nsittings at his Edinburgh studio,\none of which is displayed in\nour exhibition. Can you see\nthe resemblance?\n\nReid’s portrait was exhibited at the\n1904 World Fair in St Louis, Missouri,\nthe 1911 International Fine Arts\nExhibition in in Rome, and <em>The Art of Golf</em> touring exhibition from 2012 to 2013.",
     artworkClass: "artwork-image artwork-4",
     artworkImages: ["./assets/images/paintings/4. Tom Morris.JPG"],
   },
@@ -98,7 +98,7 @@ const portraits = [
     summary:
       "Oil on canvas, 1922\n\nField Marshal Douglas Haig,\nCommander of British Forces\nduring the First World War,\nbecame a Member of the Club\nin 1894 and was Captain in 1919.",
     body:
-      "Sir James Guthrie, one of the\n‘Glasgow Boys’ group of artists,\nchose not to depict Haig as the\nglorious victor. He is seated,\nappearing exhausted, with a\nhaunted expression alluding to\nthe horrors of the war.\n\nThe Club received so many\nborrow the painting that\nin 1928 it decided “on no\naccount whatsoever would the\nportrait be allowed out of the Club\nagain.” When Guthrie, RSA President\nfrom 1902-1919, died in 1930,\nthe Club allowed the portrait to\nbe displayed in an exhibition of\nhis works the following year.",
+      "Sir James Guthrie, one of the\n‘Glasgow Boys’ group of artists,\nchose not to depict Haig as the\nglorious victor. He is seated,\nappearing exhausted, with a\nhaunted expression alluding to\nthe horrors of the war.\n\nThe Club received so many requests to\nborrow the painting that\nin 1928 it decided “on no\naccount whatsoever would the\nportrait be allowed out of the Club\nagain.” When Guthrie, RSA President\nfrom 1902-1919, died in 1930,\nthe Club allowed the portrait to\nbe displayed in an exhibition of\nhis works the following year.",
     artworkClass: "artwork-image artwork-5",
     artworkImages: ["./assets/images/paintings/5. FM Haig.jpg"],
   },

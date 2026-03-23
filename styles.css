@@ -356,6 +356,11 @@ img {
   font-weight: 600;
 }
 
+.portrait-subhead-regular {
+  font-weight: 400;
+  font-style: italic;
+}
+
 .portrait-subhead-meta {
   display: block;
 }
