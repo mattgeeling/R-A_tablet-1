@@ -994,11 +994,11 @@ img {
 }
 
 .sculpture-artwork-1 {
-  background-image: url("./assets/images/paintings/11. Memorial.jpeg");
+  background-image: url("./assets/images/paintings/11. Memorial.webp");
 }
 
 .sculpture-artwork-2 {
-  background-image: url("./assets/images/paintings/12. Morris.jpg");
+  background-image: url("./assets/images/paintings/12. Morris.webp");
 }
 
 .sculpture-prev,
@@ -1134,45 +1134,45 @@ img {
 }
 
 .landscape-artwork-step-0 {
-  background-image: url("./assets/images/8.-1740_2.png");
+  background-image: url("./assets/images/8.-1740_2.webp");
   background-position: center center;
   background-size: contain;
 }
 
 .landscape-artwork-step-1 {
-  background-image: url("./assets/images/8-1740-foreground.png");
+  background-image: url("./assets/images/8-1740-foreground.webp");
   background-position: center center;
 }
 
 .landscape-artwork-step-2 {
-  background-image: url("./assets/images/paintings/8-1740-midground.png");
+  background-image: url("./assets/images/paintings/8-1740-midground.webp");
   background-position: center center;
 }
 
 .landscape-artwork-step-3 {
-  background-image: url("./assets/images/paintings/8-1740-background.png");
+  background-image: url("./assets/images/paintings/8-1740-background.webp");
   background-position: center center;
 }
 
 .landscape-artwork-step-4 {
-  background-image: url("./assets/images/paintings/9. Bough.jpg");
+  background-image: url("./assets/images/paintings/9. Bough.webp");
   background-position: center 30%;
 }
 
 .landscape-artwork-step-5 {
-  background-image: url("./assets/images/paintings/9.-Bough_toggle-2.jpg");
+  background-image: url("./assets/images/paintings/9.-Bough_toggle-2.webp");
 }
 
 .landscape-artwork-step-6 {
-  background-image: url("./assets/images/paintings/9.-Bough_toggle-3.jpg");
+  background-image: url("./assets/images/paintings/9.-Bough_toggle-3.webp");
 }
 
 .landscape-artwork-step-7 {
-  background-image: url("./assets/images/paintings/9.-Bough_toggle-4.jpg");
+  background-image: url("./assets/images/paintings/9.-Bough_toggle-4.webp");
 }
 
 .landscape-artwork-step-8 {
-  background-image: url("./assets/images/paintings/10. Frazer_wide.png");
+  background-image: url("./assets/images/paintings/10. Frazer_wide.webp");
 }
 
 .screen-portrait.is-large-text .portrait-title {
