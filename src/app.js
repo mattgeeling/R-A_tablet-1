@@ -54,7 +54,7 @@ const portraits = [
     body:
       "Known for depicting subjects \"with integrity in an honest natural style\", David Martin was born in Anstruther, Fife, and painted many figures of the Scottish Enlightenment. A portrait of Benjamin Franklin, painted by Martin when Franklin lived in London, is part of the White House collections.",
     artworkClass: "artwork-reference",
-    artworkImages: ["./assets/images/paintings/1. Balfour Hay.webp"],
+    artworkImages: ["./assets/images/paintings/1. Balfour Hay.JPG"],
   },
   {
     title: "Sir Francis Grant HRSA (1803-1878)",
@@ -66,8 +66,8 @@ const portraits = [
       "His son, the author Major George\nWhyte Melville, Captain in 1851,\nserved in the Crimean War. He died\nin a hunting accident in 1878 and\nthe fountain on Market Street,\nSt Andrews, was dedicated in\nhis memory.\n\nArtist Sir Francis Grant was elected a Member of the Club in 1823 and specialised in sporting and equestrian subjects. He was elected President of London's Royal Academy in 1866.",
     artworkClass: "artwork-image artwork-2",
     artworkImages: [
-      "./assets/images/paintings/2JOHNW~1.webp",
-      "./assets/images/paintings/2.1 GW Melville.webp",
+      "./assets/images/paintings/2JOHNW~1.JPG",
+      "./assets/images/paintings/2.1 GW Melville.jpg",
     ],
   },
   {
@@ -78,7 +78,7 @@ const portraits = [
     body:
       "At only 19, Edinburgh-born John Pettie’s first RSA exhibit was <em>A Scene from the Fortunes of Nigel</em>, inspired by Walter Scott’s novel. A leader amongst fellow Scottish artists in London, Pettie was elected to the Royal Academy in 1874.",
     artworkClass: "artwork-image artwork-3",
-    artworkImages: ["./assets/images/paintings/3 Henry Lamb.webp"],
+    artworkImages: ["./assets/images/paintings/3 Henry Lamb.jpg"],
   },
   {
     title: "Sir George Reid PPRSA (1841-1913)",
@@ -89,7 +89,7 @@ const portraits = [
     body:
       "Sir George Reid, President of\nthe RSA 1891 to 1902, was paid £250\nfor the commission. Reid\nsketched Morris during several\nsittings at his Edinburgh studio,\none of which is displayed in\nour exhibition. Can you see\nthe resemblance?\n\nReid’s portrait was exhibited at the\n1904 World Fair in St Louis, Missouri,\nthe 1911 International Fine Arts\nExhibition in in Rome, and <em>The Art of Golf</em> touring exhibition from 2012 to 2013.",
     artworkClass: "artwork-image artwork-4",
-    artworkImages: ["./assets/images/paintings/4. Tom Morris.webp"],
+    artworkImages: ["./assets/images/paintings/4. Tom Morris.JPG"],
   },
   {
     title: "Sir James Guthrie PPRSA (1859-1930)",
@@ -100,7 +100,7 @@ const portraits = [
     body:
       "Sir James Guthrie, one of the\n‘Glasgow Boys’ group of artists,\nchose not to depict Haig as the\nglorious victor. He is seated,\nappearing exhausted, with a\nhaunted expression alluding to\nthe horrors of the war.\n\nThe Club received so many requests to\nborrow the painting that\nin 1928 it decided “on no\naccount whatsoever would the\nportrait be allowed out of the Club\nagain.” When Guthrie, RSA President\nfrom 1902-1919, died in 1930,\nthe Club allowed the portrait to\nbe displayed in an exhibition of\nhis works the following year.",
     artworkClass: "artwork-image artwork-5",
-    artworkImages: ["./assets/images/paintings/5. FM Haig.webp"],
+    artworkImages: ["./assets/images/paintings/5. FM Haig.jpg"],
   },
   {
     title: "Sir William Hutchison PPRSA (1889-1970)",
@@ -111,7 +111,7 @@ const portraits = [
     body:
       "“One or two Club Members”\ncommissioned Sir William Hutchison\nto paint Kirkaldy’s portrait. Hutchison\nattended Edinburgh College of Art\nand was severely wounded during\nthe First World War. Recovering to\nresume his career, Hutchison was\ndirector of Glasgow School of Art\nfrom 1933-1943 and became\nPresident of the RSA in 1950.",
     artworkClass: "artwork-image artwork-6",
-    artworkImages: ["./assets/images/paintings/6. Kirkaldy.webp"],
+    artworkImages: ["./assets/images/paintings/6. Kirkaldy.jpg"],
   },
   {
     title: "Geoffrey Squire (1923-2012)",
@@ -121,7 +121,7 @@ const portraits = [
     body:
       "Geoffrey Squire studied at Leeds School of Art, Ruskin School of Art at Oxford University, and Slade School of Art at University College, London. After serving in the armed forces during the Second World War, he began teaching at Glasgow School of Art, eventually becoming Senior Lecturer\nand serving as Governor from 1988 to 1990.",
     artworkClass: "artwork-image artwork-7",
-    artworkImages: ["./assets/images/paintings/7.-John-Panton_2.webp"],
+    artworkImages: ["./assets/images/paintings/7.-John-Panton_2.png"],
   },
 ];
 
