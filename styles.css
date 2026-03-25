@@ -153,17 +153,17 @@ img {
 }
 
 .panel-portraits {
-  left: 79px;
+  left: 29px;
   animation-delay: 360ms;
 }
 
 .panel-landscapes {
-  left: 411px;
+  left: 361px;
   animation-delay: 620ms;
 }
 
 .panel-sculpture {
-  left: 738px;
+  left: 688px;
   animation-delay: 880ms;
 }
 
@@ -342,6 +342,7 @@ img {
 }
 
 .manual-nowrap {
+  display: block;
   white-space: nowrap;
 }
 
@@ -392,6 +393,9 @@ img {
   background: var(--panel-cyan);
   font-size: 24px;
   font-weight: 500;
+  text-transform: none;
+  font-variant: normal;
+  letter-spacing: normal;
 }
 
 .portrait-control-text {
@@ -865,6 +869,8 @@ img {
   color: #1f2248;
   font-size: 27px;
   font-weight: 500;
+  font-variant: normal;
+  letter-spacing: normal;
   text-transform: none;
 }
 
@@ -1285,15 +1291,15 @@ img {
   }
 
   .panel-portraits {
-    left: 7.3148%;
+    left: 2.6851%;
   }
 
   .panel-landscapes {
-    left: 38.0556%;
+    left: 33.4259%;
   }
 
   .panel-sculpture {
-    left: 68.3333%;
+    left: 63.7036%;
   }
 
   .screen-portrait {

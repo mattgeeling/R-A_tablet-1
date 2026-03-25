@@ -1,5 +1,6 @@
 const attractorScreen = document.querySelector("#attractor-screen");
 const attractorStartButton = document.querySelector("#attractor-start");
+let attractorVideo = document.querySelector(".attractor-video");
 const menuScreen = document.querySelector("#menu-screen");
 const portraitScreen = document.querySelector("#portrait-screen");
 const landscapeScreen = document.querySelector("#landscape-screen");
@@ -44,15 +45,20 @@ const sculptureBody = document.querySelector("#sculpture-body");
 const sculptureArtwork = document.querySelector("#sculpture-artwork");
 const sculptureTextFlow = document.querySelector(".sculpture-text-flow");
 const IDLE_TIMEOUT_MS = 90000;
+const ATTRACTOR_LOOP_RESTART_TIME_S = 0.1;
+const ATTRACTOR_LOOP_GUARD_WINDOW_S = 0.35;
+const ATTRACTOR_RECOVERY_CHECK_MS = 250;
+const ATTRACTOR_STALL_THRESHOLD_MS = 1500;
 
 const portraits = [
   {
     title: "David Martin\n(1737-1797)",
     artist: "<em>John Balfour Hay of Leys</em>",
+    preserveLineBreaks: true,
     summary:
       "Oil on canvas, 18th century\n\nWinner of the Challenge for the\nSilver Club in 1774, John Balfour Hay\nis depicted as a sporting gentleman, wearing his red golfing jacket.",
     body:
-      "Known for depicting subjects \"with integrity in an honest natural style\", David Martin was born in Anstruther, Fife, and painted many figures of the Scottish Enlightenment. A portrait of Benjamin Franklin, painted by Martin when Franklin lived in London, is part of the White House collections.",
+      "Known for depicting subjects \"with\nintegrity in an honest natural style\",\nDavid Martin was born in Anstruther,\nFife, and painted many figures of the\nScottish Enlightenment. A portrait of\nBenjamin Franklin, painted by Martin\nwhen Franklin lived in London, is part\nof the White House collections.",
     artworkClass: "artwork-reference",
     artworkImages: ["./assets/images/paintings/1. Balfour Hay.JPG"],
   },
@@ -61,7 +67,7 @@ const portraits = [
     artist: "<em>John Whyte Melville</em>",
     preserveLineBreaks: true,
     summary:
-      "Oil on canvas, 1874\n\n<span class=\"portrait-subhead-group\"><span class=\"portrait-subhead portrait-subhead-regular\">Major George Whyte Melville</span><span class=\"portrait-subhead-meta\">Oil on canvas, 1850s</span></span>\n\n‘The Father of the Club’, John Whyte Melville was a Member for 67 years and elected Captain twice, in 1823 and 1883, twice, in 1823 and 1883. He died before taking office for the second time. He laid the Clubhouse foundation stone when construction began in 1853 and deputised for the Prince of Wales during his Captaincy ten years later.",
+      "Oil on canvas, 1874\n\n<span class=\"portrait-subhead-group\"><span class=\"portrait-subhead portrait-subhead-regular\">Major George Whyte Melville</span><span class=\"portrait-subhead-meta\">Oil on canvas, 1850s</span></span>\n\n‘The Father of the Club’, John Whyte Melville was a Member for 67 years and elected Captain twice, in 1823 and 1883.\nHe died before taking office for the second time. He laid the Clubhouse foundation stone when construction began in 1853 and deputised for the Prince of Wales during his Captaincy ten years later.",
     body:
       "His son, the author Major George\nWhyte Melville, Captain in 1851,\nserved in the Crimean War. He died\nin a hunting accident in 1878 and\nthe fountain on Market Street,\nSt Andrews, was dedicated in\nhis memory.\n\nArtist Sir Francis Grant was elected a Member of the Club in 1823 and specialised in sporting and equestrian subjects. He was elected President of London's Royal Academy in 1866.",
     artworkClass: "artwork-image artwork-2",
@@ -87,7 +93,7 @@ const portraits = [
     summary:
       "Oil on canvas, 1903\n\n<em>‘You’ve got the checks on my\nbunnet a’ wrang!’</em> reacted Tom\nMorris upon seeing his portrait\nfor the first time.",
     body:
-      "Sir George Reid, President of\nthe RSA 1891 to 1902, was paid £250\nfor the commission. Reid\nsketched Morris during several\nsittings at his Edinburgh studio,\none of which is displayed in\nour exhibition. Can you see\nthe resemblance?\n\nReid’s portrait was exhibited at the\n1904 World Fair in St Louis, Missouri,\nthe 1911 International Fine Arts\nExhibition in in Rome, and <em>The Art of Golf</em> touring exhibition from 2012 to 2013.",
+      "Sir George Reid, President of\nthe RSA from 1891 to 1902, was\npaid £250 for the commission. Reid\nsketched Morris during several\nsittings at his Edinburgh studio,\none of which is displayed in\nour exhibition. Can you see\nthe resemblance?\n\nReid’s portrait was exhibited at the\n1904 World Fair in St Louis, Missouri,\nthe 1911 International Fine Arts\nExhibition in in Rome, and <em>The Art of Golf</em> touring exhibition from 2012 to 2013.",
     artworkClass: "artwork-image artwork-4",
     artworkImages: ["./assets/images/paintings/4. Tom Morris.JPG"],
   },
@@ -114,7 +120,8 @@ const portraits = [
     artworkImages: ["./assets/images/paintings/6. Kirkaldy.jpg"],
   },
   {
-    title: "Geoffrey Squire (1923-2012)",
+    title: "Geoffrey Squire\n(1923-2012)",
+    largeTextTitle: "Geoffrey Squire (1923-2012)",
     artist: "<em>John Panton</em>",
     preserveLineBreaks: true,
     summary:
@@ -122,7 +129,7 @@ const portraits = [
     body:
       "Geoffrey Squire studied at Leeds School\nof Art, Ruskin School of Art at Oxford\nUniversity, and Slade School of Art at\nUniversity College, London. After serving in\nthe armed forces during the Second World\nWar, he began teaching at Glasgow School\nof Art, eventually becoming Senior&nbsp;Lecturer\nand serving as Governor from 1988 to 1990.",
     largeTextBody:
-      "<span class=\"manual-nowrap\">Geoffrey Squire studied at Leeds School</span>\n<span class=\"manual-nowrap\">of Art, Ruskin School of Art at Oxford</span>\n<span class=\"manual-nowrap\">University, and Slade School of Art at</span>\n<span class=\"manual-nowrap\">University College, London. After</span>\n<span class=\"manual-nowrap\">serving in the armed forces during the</span>\n<span class=\"manual-nowrap\">Second World War, he began teaching</span>\n<span class=\"manual-nowrap\">at Glasgow School of Art, eventually</span>\n<span class=\"manual-nowrap\">becoming Senior Lecturer and serving</span>\n<span class=\"manual-nowrap\">as Governor from 1988 to 1990.</span>",
+      "<span class=\"manual-nowrap\">Geoffrey Squire studied at Leeds School</span><span class=\"manual-nowrap\">of Art, Ruskin School of Art at Oxford</span><span class=\"manual-nowrap\">University, and Slade School of Art at</span><span class=\"manual-nowrap\">University College, London. After serving</span><span class=\"manual-nowrap\">in the armed forces during the Second</span><span class=\"manual-nowrap\">World War, he began teaching at Glasgow</span><span class=\"manual-nowrap\">School of Art, eventually becoming Senior</span><span class=\"manual-nowrap\">Lecturer and serving as Governor from</span><span class=\"manual-nowrap\">1988 to 1990.</span>",
     preserveLargeTextLineBreaks: true,
     artworkClass: "artwork-image artwork-7",
     artworkImages: ["./assets/images/paintings/7.-John-Panton_2.png"],
@@ -138,6 +145,172 @@ let currentLandscapePaintingIndex = 0;
 let currentLandscapeStep = 0;
 let currentSculptureIndex = 0;
 let idleTimeoutTimer = null;
+let allowManagedAttractorPause = false;
+let attractorPreviousTime = 0;
+let attractorLastProgressAt = Date.now();
+let attractorLoopGuardActive = false;
+let attractorRecoveryInterval = null;
+
+function isAttractorVisible() {
+  return attractorScreen && !attractorScreen.classList.contains("is-hidden");
+}
+
+function recoverAttractorVideo(reason) {
+  if (!attractorVideo || !isAttractorVisible()) {
+    return;
+  }
+
+  try {
+    const duration = Number.isFinite(attractorVideo.duration) ? attractorVideo.duration : 0;
+    const restartTime = duration > 1 ? ATTRACTOR_LOOP_RESTART_TIME_S : 0;
+    attractorVideo.currentTime = restartTime;
+    attractorPreviousTime = restartTime;
+  } catch (_error) {
+    attractorPreviousTime = 0;
+  }
+
+  const playPromise = attractorVideo.play();
+
+  if (playPromise && typeof playPromise.catch === "function") {
+    playPromise.catch(() => {});
+  }
+
+  attractorLastProgressAt = Date.now();
+}
+
+function startAttractorRecoveryTicker() {
+  if (attractorRecoveryInterval !== null) {
+    return;
+  }
+
+  attractorRecoveryInterval = window.setInterval(() => {
+    if (
+      attractorVideo &&
+      isAttractorVisible() &&
+      !attractorVideo.paused &&
+      !attractorVideo.ended &&
+      Date.now() - attractorLastProgressAt > ATTRACTOR_STALL_THRESHOLD_MS
+    ) {
+      recoverAttractorVideo();
+    }
+  }, ATTRACTOR_RECOVERY_CHECK_MS);
+}
+
+function attachAttractorVideoListeners() {
+  if (!attractorVideo || attractorVideo.dataset.attractorBound === "true") {
+    return;
+  }
+
+  attractorVideo.dataset.attractorBound = "true";
+
+  attractorVideo.addEventListener("timeupdate", () => {
+    const currentTime = Number.isFinite(attractorVideo.currentTime) ? attractorVideo.currentTime : 0;
+    const duration = Number.isFinite(attractorVideo.duration) ? attractorVideo.duration : 0;
+
+    if (currentTime + 0.25 < attractorPreviousTime) {
+      attractorLoopGuardActive = false;
+    } else if (Math.abs(currentTime - attractorPreviousTime) > 0.05) {
+      attractorLastProgressAt = Date.now();
+    }
+
+    if (duration > 1) {
+      const isNearLoopBoundary = duration - currentTime <= ATTRACTOR_LOOP_GUARD_WINDOW_S;
+
+      if (isNearLoopBoundary && !attractorLoopGuardActive) {
+        attractorLoopGuardActive = true;
+
+        try {
+          attractorVideo.currentTime = ATTRACTOR_LOOP_RESTART_TIME_S;
+          attractorPreviousTime = ATTRACTOR_LOOP_RESTART_TIME_S;
+          attractorLastProgressAt = Date.now();
+        } catch (_error) {
+          attractorLoopGuardActive = false;
+        }
+
+        const playPromise = attractorVideo.play();
+
+        if (playPromise && typeof playPromise.catch === "function") {
+          playPromise.catch(() => {});
+        }
+      } else if (!isNearLoopBoundary) {
+        attractorLoopGuardActive = false;
+      }
+    }
+
+    attractorPreviousTime = currentTime;
+  });
+
+  attractorVideo.addEventListener("pause", () => {
+    if (!allowManagedAttractorPause && isAttractorVisible() && !attractorVideo.ended) {
+      playAttractorVideo();
+    }
+  });
+}
+
+function playAttractorVideo({ reset = false } = {}) {
+  if (!attractorVideo) {
+    return;
+  }
+
+  startAttractorRecoveryTicker();
+  attractorVideo.loop = false;
+  attractorVideo.muted = true;
+  attractorVideo.defaultMuted = true;
+  attractorVideo.playsInline = true;
+
+  if (reset) {
+    try {
+      attractorVideo.currentTime = 0;
+      attractorPreviousTime = 0;
+      attractorLastProgressAt = Date.now();
+      attractorLoopGuardActive = false;
+    } catch (_error) {
+      // Ignore seek failures while the browser is still preparing the video.
+    }
+  }
+
+  const playWhenReady = () => {
+    if (!attractorVideo || !isAttractorVisible()) {
+      return;
+    }
+
+    const playPromise = attractorVideo.play();
+
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(() => {});
+    }
+  };
+
+  if (attractorVideo.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA) {
+    playWhenReady();
+    return;
+  }
+
+  attractorVideo.addEventListener("canplay", playWhenReady, { once: true });
+  attractorVideo.load();
+}
+
+function stopAttractorVideo({ reset = false } = {}) {
+  if (!attractorVideo) {
+    return;
+  }
+
+  allowManagedAttractorPause = true;
+  attractorVideo.pause();
+  window.setTimeout(() => {
+    allowManagedAttractorPause = false;
+  }, 0);
+
+  if (reset) {
+    try {
+      attractorVideo.currentTime = 0;
+      attractorPreviousTime = 0;
+      attractorLoopGuardActive = false;
+    } catch (_error) {
+      // Ignore seek failures while the browser is still preparing the video.
+    }
+  }
+}
 
 const sculptures = [
   {
@@ -244,6 +417,7 @@ const landscapePaintings = [
 ];
 
 function showMenu() {
+  stopAttractorVideo({ reset: true });
   attractorScreen.classList.add("is-hidden");
   menuScreen.classList.remove("is-hidden");
   portraitScreen.classList.add("is-hidden");
@@ -273,6 +447,9 @@ function showAttractor() {
   portraitScreen.classList.add("is-hidden");
   landscapeScreen.classList.add("is-hidden");
   sculptureScreen.classList.add("is-hidden");
+  window.requestAnimationFrame(() => {
+    playAttractorVideo({ reset: true });
+  });
 }
 
 function showPortraits() {
@@ -331,10 +508,11 @@ function renderPortrait(index) {
   const preserveLineBreaks =
     portrait.preserveLineBreaks === true || (isLargeText && portrait.preserveLargeTextLineBreaks === true);
   const preventWidow = !preserveLineBreaks;
+  const title = isLargeText && portrait.largeTextTitle ? portrait.largeTextTitle : portrait.title;
   const summary = isLargeText && portrait.largeTextSummary ? portrait.largeTextSummary : portrait.summary;
   const body = isLargeText && portrait.largeTextBody ? portrait.largeTextBody : portrait.body;
 
-  portraitTitle.innerHTML = formatCopy(portrait.title);
+  portraitTitle.innerHTML = formatCopy(title);
   portraitArtist.innerHTML = formatCopy(portrait.artist);
   portraitSummary.innerHTML = formatCopy(summary, { preventWidow });
   portraitBody.innerHTML = formatCopy(body, { preventWidow });
@@ -375,6 +553,7 @@ function toggleLargeText() {
   isLargeText = !isLargeText;
   portraitScreen.classList.toggle("is-large-text", isLargeText);
   portraitTextButton.setAttribute("aria-pressed", String(isLargeText));
+  renderPortrait(currentPortraitIndex);
   portraitTextFlow.scrollTop = 0;
   updatePortraitOverflow();
 }
@@ -611,4 +790,6 @@ window.addEventListener("resize", updateSculptureOverflow);
   window.addEventListener(eventName, startIdleTimeout, { passive: true, capture: true });
 });
 
+attachAttractorVideoListeners();
 startIdleTimeout();
+playAttractorVideo();

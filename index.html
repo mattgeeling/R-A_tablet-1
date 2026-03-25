@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>R&amp;A Interactive</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260325j" />
   </head>
   <body>
     <main class="app-shell">
       <section class="stage" aria-live="polite">
             <div id="attractor-screen" class="screen screen-attractor" aria-label="R&A attractor">
               <button id="attractor-start" class="attractor-start" type="button" aria-label="Start interactive">
-                <video class="attractor-video" autoplay muted loop playsinline aria-hidden="true">
-                  <source src="./assets/videos/Attractor 1_slower.mp4" type="video/mp4" />
+                <video class="attractor-video" autoplay muted playsinline webkit-playsinline preload="auto" aria-hidden="true">
+                  <source src="./assets/videos/Attractor 1_slower_30fps.mp4" type="video/mp4" />
                 </video>
               </button>
             </div>
@@ -142,6 +142,6 @@
       </section>
     </main>
 
-    <script src="./src/app.js" defer></script>
+    <script src="./src/app.js?v=20260325j" defer></script>
   </body>
 </html>
