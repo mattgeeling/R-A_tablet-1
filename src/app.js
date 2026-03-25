@@ -98,7 +98,7 @@ const portraits = [
     summary:
       "Oil on canvas, 1922\n\nField Marshal Douglas Haig,\nCommander of British Forces\nduring the First World War,\nbecame a Member of the Club\nin 1894 and was Captain in 1919.",
     body:
-      "Sir James Guthrie, one of the\n‘Glasgow Boys’ group of artists,\nchose not to depict Haig as the\nglorious victor. He is seated,\nappearing exhausted, with a\nhaunted expression alluding to\nthe horrors of the war.\n\nThe Club received so many requests to\nborrow the painting that\nin 1928 it decided “on no\naccount whatsoever would the\nportrait be allowed out of the Club\nagain.” When Guthrie, RSA President\nfrom 1902-1919, died in 1930,\nthe Club allowed the portrait to\nbe displayed in an exhibition of\nhis works the following year.",
+      "Sir James Guthrie, one of the\n‘Glasgow Boys’ group of artists,\nchose not to depict Haig as the\nglorious victor. He is seated,\nappearing exhausted, with a\nhaunted expression alluding to\nthe horrors of the war.\n\nThe Club received so many requests\nto borrow the painting that\nin 1928 it decided “on no\naccount whatsoever would the\nportrait be allowed out of the Club\nagain.” When Guthrie, RSA President\nfrom 1902-1919, died in 1930,\nthe Club allowed the portrait to\nbe displayed in an exhibition of\nhis works the following year.",
     artworkClass: "artwork-image artwork-5",
     artworkImages: ["./assets/images/paintings/5. FM Haig.jpg"],
   },
@@ -116,10 +116,14 @@ const portraits = [
   {
     title: "Geoffrey Squire (1923-2012)",
     artist: "<em>John Panton</em>",
+    preserveLineBreaks: true,
     summary:
       "Oil on canvas, 1995\n\nThe Club’s Honorary Professional from 1988 to 2006, John Panton retired shortly after his 90th birthday. During a distinguished career Panton won 39 professional tournaments, played in three Ryder Cups and twice finished fifth in The Open.",
     body:
-      "Geoffrey Squire studied at Leeds School of Art, Ruskin School of Art at Oxford University, and Slade School of Art at University College, London. After serving in the armed forces during the Second World War, he began teaching at Glasgow School of Art, eventually becoming Senior Lecturer\nand serving as Governor from 1988 to 1990.",
+      "Geoffrey Squire studied at Leeds School\nof Art, Ruskin School of Art at Oxford\nUniversity, and Slade School of Art at\nUniversity College, London. After serving in\nthe armed forces during the Second World\nWar, he began teaching at Glasgow School\nof Art, eventually becoming Senior&nbsp;Lecturer\nand serving as Governor from 1988 to 1990.",
+    largeTextBody:
+      "<span class=\"manual-nowrap\">Geoffrey Squire studied at Leeds School</span>\n<span class=\"manual-nowrap\">of Art, Ruskin School of Art at Oxford</span>\n<span class=\"manual-nowrap\">University, and Slade School of Art at</span>\n<span class=\"manual-nowrap\">University College, London. After</span>\n<span class=\"manual-nowrap\">serving in the armed forces during the</span>\n<span class=\"manual-nowrap\">Second World War, he began teaching</span>\n<span class=\"manual-nowrap\">at Glasgow School of Art, eventually</span>\n<span class=\"manual-nowrap\">becoming Senior Lecturer and serving</span>\n<span class=\"manual-nowrap\">as Governor from 1988 to 1990.</span>",
+    preserveLargeTextLineBreaks: true,
     artworkClass: "artwork-image artwork-7",
     artworkImages: ["./assets/images/paintings/7.-John-Panton_2.png"],
   },
@@ -324,12 +328,16 @@ function renderPortrait(index) {
   const portrait = portraits[index];
   const artworkImages = portrait.artworkImages ?? [];
   const activeArtworkImage = artworkImages[currentPortraitArtworkIndex] ?? "";
-  const preventWidow = portrait.preserveLineBreaks !== true;
+  const preserveLineBreaks =
+    portrait.preserveLineBreaks === true || (isLargeText && portrait.preserveLargeTextLineBreaks === true);
+  const preventWidow = !preserveLineBreaks;
+  const summary = isLargeText && portrait.largeTextSummary ? portrait.largeTextSummary : portrait.summary;
+  const body = isLargeText && portrait.largeTextBody ? portrait.largeTextBody : portrait.body;
 
   portraitTitle.innerHTML = formatCopy(portrait.title);
   portraitArtist.innerHTML = formatCopy(portrait.artist);
-  portraitSummary.innerHTML = formatCopy(portrait.summary, { preventWidow });
-  portraitBody.innerHTML = formatCopy(portrait.body, { preventWidow });
+  portraitSummary.innerHTML = formatCopy(summary, { preventWidow });
+  portraitBody.innerHTML = formatCopy(body, { preventWidow });
   portraitArtwork.className = `portrait-artwork ${portrait.artworkClass}`;
   portraitArtwork.style.backgroundImage = activeArtworkImage ? `url("${activeArtworkImage}")` : "";
   portraitArtwork.classList.toggle("is-toggleable", artworkImages.length > 1);

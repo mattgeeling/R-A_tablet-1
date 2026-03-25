@@ -341,6 +341,10 @@ img {
   white-space: normal;
 }
 
+.manual-nowrap {
+  white-space: nowrap;
+}
+
 .portrait-subhead-group {
   display: inline-block;
   width: 100%;
@@ -1140,7 +1144,7 @@ img {
 }
 
 .landscape-artwork-step-1 {
-  background-image: url("./assets/images/8-1740-foreground.png");
+  background-image: url("./assets/images/8-1740-foreground.png?v=20260325");
   background-position: center center;
 }
 
